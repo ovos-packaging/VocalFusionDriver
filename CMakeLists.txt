@@ -16,6 +16,8 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
+set(KERNELHEADERS_DIR /opt/rpi-kernel-5.4.y-headers)
+
 set(KERNELHEADERS_INCLUDE_DIRS
   ${KERNELHEADERS_DIR}/include
   ${KERNELHEADERS_DIR}/arch/x86/include
