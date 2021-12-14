@@ -45,6 +45,6 @@ add_custom_command(OUTPUT ${DRIVER_FILE}
 
 add_custom_target(vocal-fusion-driver ALL DEPENDS ${DRIVER_FILE})
 
-install(FILES vocalfusion-soundcard.ko DESTINATION /lib/modules)
+install(FILES obj-aarch64-linux-gnu/vocalfusion-soundcard.ko DESTINATION /lib/modules)
 install(FILES xvf3510.dtbo DESTINATION /boot/overlays/)
 install(FILES xvf3510.dts DESTINATION /boot/overlays/)
