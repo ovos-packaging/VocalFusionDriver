@@ -20,7 +20,6 @@ set(KERNELHEADERS_DIR /opt/rpi-kernel-5.4.y-headers)
 
 set(KERNELHEADERS_INCLUDE_DIRS
   ${KERNELHEADERS_DIR}/include
-  ${KERNELHEADERS_DIR}/arch/x86/include
   CACHE PATH "Kernel headers include dirs"
 )
 
