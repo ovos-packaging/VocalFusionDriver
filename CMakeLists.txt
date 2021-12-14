@@ -16,14 +16,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-execute_process(
-  COMMAND git clone --depth=1 --branch rpi-5.4.y https://github.com/raspberrypi/linux
-)
-
-execute_process(
-  COMMAND cd linux && make headers_install ARCH=arm64 INSTALL_HDR_PATH=/opt/rpi-kernel-5.4.y-headers
-)
-
 # Find the headers
 find_path(KERNELHEADERS_DIR
   include/linux/user.h
