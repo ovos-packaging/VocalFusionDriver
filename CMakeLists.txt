@@ -16,20 +16,14 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-# Find the headers
-find_path(KERNELHEADERS_DIR
-  include/linux/user.h
-  PATHS /opt/rpi-kernel-5.4.y-headers
-)
-
-message( "Found Kernel DIR" )
-message( ${KERNELHEADERS_DIR} )
-
 set(KERNELHEADERS_INCLUDE_DIRS
   ${KERNELHEADERS_DIR}/include
   ${KERNELHEADERS_DIR}/arch/x86/include
   CACHE PATH "Kernel headers include dirs"
 )
+
+message( "Found Kernel DIR" )
+message( ${KERNELHEADERS_DIR} )
 
 include_directories(${KERNELHEADERS_INCLUDE_DIRS})
 
