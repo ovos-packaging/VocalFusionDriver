@@ -16,7 +16,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set(KERNELHEADERS_DIR /opt/rpi-kernel-5.4.y-headers)
+set(KERNELHEADERS_DIR /usr/src/linux-headers-*)
 
 set(KERNELHEADERS_INCLUDE_DIRS
   ${KERNELHEADERS_DIR}/include
@@ -25,6 +25,9 @@ set(KERNELHEADERS_INCLUDE_DIRS
 
 message( "Found Kernel DIR" )
 message( ${KERNELHEADERS_DIR} )
+
+message( "Found Kernel Include DIR" )
+message( ${KERNELHEADERS_DIR}/include )
 
 include_directories(${KERNELHEADERS_INCLUDE_DIRS})
 
