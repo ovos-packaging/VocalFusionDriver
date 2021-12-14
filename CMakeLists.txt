@@ -16,7 +16,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
-set(KERNELHEADERS_DIR /usr/src/linux-headers-*)
+set(KERNELHEADERS_DIR /usr/src/linux-headers-5.4.0-1008-raspi)
 
 set(KERNELHEADERS_INCLUDE_DIRS
   ${KERNELHEADERS_DIR}/include
